@@ -6,6 +6,7 @@ import ClassCard from './components/ClassCard';
 import Announcement from './components/Announcement';
 import Gallery from './components/Gallery';
 import { useScrollReveal } from './hooks/useScrollReveal';
+import sportsPoster from './assets/sports_meet_poster.png';
 
 function App() {
   useScrollReveal();
@@ -45,12 +46,13 @@ function App() {
             </div>
           </div>
           <div style={{
-            height: '450px',
-            backgroundColor: 'var(--bg-secondary)',
+            height: '500px',
+            backgroundColor: '#f8f8f8',
             borderRadius: 'var(--radius-lg)',
-            backgroundImage: 'url("https://scontent.flhr10-2.fna.fbcdn.net/v/t39.30808-6/450410667_122119131650333632_1438914631383794178_n.jpg")',
-            backgroundSize: 'cover',
+            backgroundImage: `url(${sportsPoster})`,
+            backgroundSize: 'contain',
             backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
             boxShadow: 'var(--shadow-lg)',
             border: '8px solid white'
           }}></div>
