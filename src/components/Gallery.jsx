@@ -1,64 +1,24 @@
 import React, { useState } from 'react';
 
 const Gallery = () => {
-  const [activeCategory, setActiveCategory] = useState('ALL');
-
-  const categories = ['ALL', 'SPORTS', 'PONGAL', 'FESTIVALS'];
-
   const images = [
-    { category: 'PONGAL', url: 'https://scontent.fman2-2.fna.fbcdn.net/v/t39.30808-6/656853571_122259899528177787_4458516498866930092_n.jpg', caption: 'Pongal Ritual 2026' },
-    { category: 'PONGAL', url: 'https://scontent.fman2-1.fna.fbcdn.net/v/t39.30808-6/656325412_122259776156177787_5147466301134840125_n.jpg', caption: 'Traditional Performance' },
-    { category: 'PONGAL', url: 'https://scontent.fman2-2.fna.fbcdn.net/v/t39.30808-6/656471859_122260126718177787_2238751648571973060_n.jpg', caption: 'Community Feast' },
-    { category: 'PONGAL', url: 'https://scontent.fman2-1.fna.fbcdn.net/v/t39.30808-6/670448800_122262633644177787_8528298545096862947_n.jpg', caption: 'Group Celebration' },
-    
-    { category: 'SPORTS', url: 'https://scontent.fman2-2.fna.fbcdn.net/v/t39.30808-6/666002996_122261742950177787_2715356495108364658_n.jpg', caption: 'Tamil Sports Meet 2026 Poster' },
-    { category: 'SPORTS', url: 'https://scontent.fman2-2.fna.fbcdn.net/v/t39.30808-6/637709415_122256108218177787_6631604518013460789_n.jpg', caption: 'Youth Sports Activity' },
-    { category: 'SPORTS', url: 'https://scontent.fman2-1.fna.fbcdn.net/v/t39.30808-6/636992323_122256108032177787_5203436795976302537_n.jpg', caption: 'Active Participants' },
-    
-    { category: 'FESTIVALS', url: 'https://scontent.fman2-1.fna.fbcdn.net/v/t39.30808-6/651042941_122258944352177787_12303477904547572_n.jpg', caption: "Mother's Day 2026" },
-    { category: 'FESTIVALS', url: 'https://scontent.fman2-2.fna.fbcdn.net/v/t39.30808-6/649297935_122258110928177787_331202673069334328_n.jpg', caption: "Women's Day 2026" },
-    { category: 'FESTIVALS', url: 'https://scontent.fman2-1.fna.fbcdn.net/v/t39.30808-6/638767882_122256106790177787_1293944955748915961_n.jpg', caption: 'Cultural Session' }
+    { url: 'https://scontent.fman2-1.fna.fbcdn.net/v/t39.30808-6/636745188_122256107858177787_6167188308458373918_n.jpg?stp=c256.0.1536.1536a_dst-jpg_s552x414_tt6&_nc_cat=108&ccb=1-7&_nc_sid=5df8b4&_nc_ohc=BSL61h729TkQ7kNvwH_TQV7&_nc_oc=AdpCLgghCx0BE2IaMdwzTiCk0JHb2mz7Agee6KCggmMSLVwHHR_VFkal8VgZmFaYiuE&_nc_zt=23&_nc_ht=scontent.fman2-1.fna&_nc_gid=_024M_D9fFsGH50PH_MDiA&_nc_ss=7a389&oh=00_Af1Vs18-q6s1BGabPXY32f6SySUXSatYsOhYTo3fcsCHPg&oe=69E8125F', caption: 'Stirring the Pongal Pot' },
+    { url: 'https://scontent.fman2-1.fna.fbcdn.net/v/t39.30808-6/636295749_122256107720177787_8952118292877117605_n.jpg?stp=c256.0.1536.1536a_dst-jpg_s552x414_tt6&_nc_cat=111&ccb=1-7&_nc_sid=5df8b4&_nc_ohc=r1nWp6nWCTsQ7kNvwGyeKHr&_nc_oc=AdqVvpp3iRMBClCn15QsyqAY9Wo7snlWSFZlFOMB7DceA6Md7-OI6rSu9-bZYqcvB2Y&_nc_zt=23&_nc_ht=scontent.fman2-2.fna&_nc_gid=_024M_D9fFsGH50PH_MDiA&_nc_ss=7a389&oh=00_Af2SVxHAK_MKc4Lzpn5oq5M5_GJ1zBqKpP-61r6SQ99C_Q&oe=69E8155A', caption: 'Traditional Food Service' },
+    { url: 'https://scontent.fman2-1.fna.fbcdn.net/v/t39.30808-6/636911038_122256103088177787_7000786849444337240_n.jpg?stp=c256.0.1536.1536a_dst-jpg_s552x414_tt6&_nc_cat=103&ccb=1-7&_nc_sid=5df8b4&_nc_ohc=VAt51y0rwJcQ7kNvwERBsM9&_nc_oc=AdrW1BZEqlSQmQNoc-rfCl7ZZPs3om1Hgxl_1fd746-mK3PZdMLm1Ma7iVCzi5__xlU&_nc_zt=23&_nc_ht=scontent.fman2-1.fna&_nc_gid=UIuOaZIlWebbfkq0265SFw&_nc_ss=7a389&oh=00_Af1HwhAbqNDjPWvtpwAE9uWTz7v9zou_t8_XDBlArnE58w&oe=69E7F9E0', caption: 'Community Kitchen Group' },
+    { url: 'https://scontent.fman2-1.fna.fbcdn.net/v/t39.30808-6/656325412_122259776156177787_5147466301134840125_n.jpg?stp=c256.0.1536.1536a_cp6_dst-jpg_s552x414_tt6&_nc_cat=101&ccb=1-7&_nc_sid=5df8b4&_nc_ohc=QE867hbKlzsQ7kNvwGHuCp9&_nc_oc=Adr-WR1KBylF-zSdkcf3QG2SYUnMJy3zjna__lhX4D7AUAqeAgQk2xsslpPk_8UOwHk&_nc_zt=23&_nc_ht=scontent.fman2-1.fna&_nc_gid=ziG4HbpB7vk8BEBkSqpgbw&_nc_ss=7a389&oh=00_Af3ulY69qIafndQfAzpizJWZOauoTZSWuQ0uSahUuN39FA&oe=69E7FBC3', caption: 'Traditional Dance Performance' },
+    { url: 'https://scontent.fman2-1.fna.fbcdn.net/v/t39.30808-6/635715104_122256108176177787_4936305965561655921_n.jpg?stp=c0.169.1536.1536a_dst-jpg_s552x414_tt6&_nc_cat=106&ccb=1-7&_nc_sid=5df8b4&_nc_ohc=m7zM01GzokYQ7kNvwFrFD8Q&_nc_oc=AdoPo3BBnSCe08bE5oNfnB2lmGaj-xFtVPHYSnperQSSRK3MOEfUfyPPj8pfCJM18ZA&_nc_zt=23&_nc_ht=scontent.fman2-2.fna&_nc_gid=SFsNUh1z-Hz2ky5tAhjUgg&_nc_ss=7a389&oh=00_Af1wHKEGPBzBxpLH-gKJYiStcLlEY5skcMfxbg_xjj5_ug&oe=69E80521', caption: 'Youth Learning Sessions' },
+    { url: 'https://scontent.fman2-1.fna.fbcdn.net/v/t39.30808-6/639753731_122256103352177787_4640352363397207487_n.jpg?stp=c256.0.1536.1536a_dst-jpg_s552x414_tt6&_nc_cat=100&ccb=1-7&_nc_sid=5df8b4&_nc_ohc=otNRjLgp6kcQ7kNvwFmKFIH&_nc_oc=Adqr7jDlWEanFBt9d0mjd9O1qSXtCXTTGCeYMbvw1f8QO4t8JpfXtwq9DZf8jWtKRKA&_nc_zt=23&_nc_ht=scontent.fman2-1.fna&_nc_gid=8j4y_d1UO1z1fBSzUaIQaw&_nc_ss=7a389&oh=00_Af281UIUj0obqwZySFyTQdK4SDfFYUB7OFiKnh2KVdgeMg&oe=69E7F7ED', caption: 'Pongal Ritual Altar' },
+    { url: 'https://scontent.fman2-1.fna.fbcdn.net/v/t39.30808-6/656471859_122260126718177787_2238751648571973060_n.jpg', caption: 'Community Gathering' },
+    { url: 'https://scontent.fman2-1.fna.fbcdn.net/v/t39.30808-6/638495820_122256107798177787_6399216823192149432_n.jpg?stp=c256.0.1536.1536a_dst-jpg_s552x414_tt6&_nc_cat=107&ccb=1-7&_nc_sid=5df8b4&_nc_ohc=V-0p706R6qwQ7kNvwGfHozP&_nc_oc=AdoC2vfW6d6OCWNW-xGDThIcK1D_KvjqpneHqMA1SYmu6RvQj70Rwiy7jI11367_8zo&_nc_zt=23&_nc_ht=scontent.fman2-2.fna&_nc_gid=un5OhKNd1rPDTbVo7rsleQ&_nc_ss=7a389&oh=00_Af3sCXaQocgDhFZc4dPxro_ii_2kDf3Zk8MxphUBbqjbPA&oe=69E7FBE7', caption: 'Student Workshop' }
   ];
-
-  const filteredImages = activeCategory === 'ALL' 
-    ? images 
-    : images.filter(img => img.category === activeCategory);
 
   return (
     <section id="gallery" className="reveal" style={{ padding: '100px 0', backgroundColor: 'var(--bg-primary)' }}>
       <div className="container">
         <div className="section-title">
-          <h2>Gallery</h2>
-          <p className="tamil-font" style={{ fontSize: '1.2rem', marginBottom: '10px' }}>புகைப்படத் தொகுப்பு</p>
-          <p>Explore our vibrant events and cultural celebrations through these captured moments.</p>
-        </div>
-
-        {/* Category Filters */}
-        <div style={{ 
-          display: 'flex', 
-          justifyContent: 'center', 
-          gap: '15px', 
-          marginBottom: '50px',
-          flexWrap: 'wrap'
-        }}>
-          {categories.map(cat => (
-            <button
-              key={cat}
-              onClick={() => setActiveCategory(cat)}
-              className="btn"
-              style={{
-                backgroundColor: activeCategory === cat ? 'var(--primary)' : 'white',
-                color: activeCategory === cat ? 'white' : 'var(--text-primary)',
-                border: `2px solid ${activeCategory === cat ? 'var(--primary)' : '#eee'}`,
-                padding: '10px 25px',
-                borderRadius: '30px',
-                fontWeight: '600',
-                transition: 'all 0.3s ease'
-              }}
-            >
-              {cat}
-            </button>
-          ))}
+          <h2>Pongal Rituals 2026</h2>
+          <p className="tamil-font" style={{ fontSize: '1.2rem', marginBottom: '10px' }}>பொங்கல் விழா 2026</p>
+          <p>Memories from our vibrant Pongal celebrations in Lincolnshire.</p>
         </div>
 
         {/* Gallery Grid */}
@@ -66,11 +26,12 @@ const Gallery = () => {
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))',
           gap: '25px',
-          minHeight: '400px'
+          minHeight: '400px',
+          marginTop: '40px'
         }}>
-          {filteredImages.map((img, index) => (
+          {images.map((img, index) => (
             <div 
-              key={`${activeCategory}-${index}`} 
+              key={index} 
               style={{
                 position: 'relative',
                 height: '300px',
@@ -87,20 +48,6 @@ const Gallery = () => {
                 alt={img.caption} 
                 style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1)' }} 
               />
-              <div style={{
-                position: 'absolute',
-                top: '15px',
-                left: '15px',
-                backgroundColor: 'rgba(255, 140, 0, 0.9)',
-                color: 'white',
-                padding: '4px 12px',
-                borderRadius: '20px',
-                fontSize: '0.75rem',
-                fontWeight: 'bold',
-                zIndex: 2
-              }}>
-                {img.category}
-              </div>
               <div style={{
                 position: 'absolute',
                 bottom: 0,
@@ -123,6 +70,7 @@ const Gallery = () => {
           ))}
         </div>
       </div>
+
       
       <style>{`
         @keyframes fadeInUp {
