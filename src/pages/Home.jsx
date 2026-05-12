@@ -1,6 +1,8 @@
 import React from 'react';
-import sportsPoster from '../assets/sports_meet_2026.jpg';
+import newSportsPoster from '../assets/new_sports_meet_2026.jpg';
 import mullivaikkalPoster from '../assets/mullivaikkal_2026.jpg';
+import charityPoster from '../assets/charity_2026.jpg';
+import careerPoster from '../assets/career_guidance_2026.jpg';
 import heroLanding from '../assets/hero_landing.jpg';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { Link } from 'react-router-dom';
@@ -94,7 +96,7 @@ const Home = () => {
             }}>
               <div style={{
                 height: '340px',
-                backgroundImage: `url(${sportsPoster})`,
+                backgroundImage: `url(${newSportsPoster})`,
                 backgroundSize: 'contain',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',
@@ -113,13 +115,13 @@ const Home = () => {
                   textTransform: 'uppercase',
                   letterSpacing: '0.05em',
                 }}>Upcoming</span>
-                <h3 style={{ fontSize: '1.4rem', color: 'var(--primary)', marginBottom: '12px' }}>Community Sports Meet 2026</h3>
+                <h3 style={{ fontSize: '1.4rem', color: 'var(--primary)', marginBottom: '12px' }}>Tamil Sports Meet 2026</h3>
                 <p style={{ marginBottom: '16px', fontSize: '1rem', lineHeight: '1.7', color: 'var(--text-secondary)' }}>
                   Join us for our annual community sports meet! A day filled with fun, friendly competition, and community spirit. Events are organized for all age groups.
                 </p>
                 <p style={{ marginBottom: '20px', fontSize: '0.95rem', color: 'var(--text-primary)' }}>
-                  <strong>📅 Date:</strong> Coming Soon<br/>
-                  <strong>📍 Location:</strong> Lincolnshire Sports Arena
+                  <strong>📅 Date:</strong> 11th July 2026<br/>
+                  <strong>📍 Location:</strong> Ropsley Village
                 </p>
                 <Link to="/tamil-school#registration" className="btn btn-primary" style={{ width: '100%', justifyContent: 'center', textAlign: 'center', textDecoration: 'none' }}>Register Now</Link>
               </div>
@@ -174,6 +176,101 @@ const Home = () => {
                 >
                   Learn More
                 </a>
+              </div>
+            </div>
+
+            {/* Charity Card */}
+            <div style={{
+              backgroundColor: 'white',
+              borderRadius: 'var(--radius-lg)',
+              overflow: 'hidden',
+              boxShadow: 'var(--shadow-lg)',
+              border: '1px solid rgba(0,0,0,0.06)',
+              display: 'flex',
+              flexDirection: 'column',
+            }}>
+              <div style={{
+                height: '340px',
+                backgroundImage: `url(${charityPoster})`,
+                backgroundSize: 'contain',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
+                backgroundColor: '#f8f8f8',
+              }} />
+              <div style={{ padding: '28px' }}>
+                <span style={{
+                  display: 'inline-block',
+                  backgroundColor: 'var(--primary)',
+                  color: 'white',
+                  fontSize: '0.75rem',
+                  fontWeight: 700,
+                  padding: '4px 12px',
+                  borderRadius: '20px',
+                  marginBottom: '12px',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.05em',
+                }}>Charity</span>
+                <h3 style={{ fontSize: '1.4rem', color: 'var(--primary)', marginBottom: '12px' }}>Charity Collection Drive</h3>
+                <p style={{ marginBottom: '16px', fontSize: '1rem', lineHeight: '1.7', color: 'var(--text-secondary)' }}>
+                  Join us in making a difference! We are collecting gently used dresses, shoes, educational materials, and household linens for those in need.
+                </p>
+                <p style={{ marginBottom: '20px', fontSize: '0.95rem', color: 'var(--text-primary)' }}>
+                  <strong>📅 Date:</strong> 29th May 2026<br/>
+                  <strong>📍 Location:</strong> Tamil Kalvikkoodam Lincolnshire
+                </p>
+                <a href="#contact" className="btn btn-primary" style={{ width: '100%', justifyContent: 'center', textAlign: 'center', textDecoration: 'none' }}>Contact Us</a>
+              </div>
+            </div>
+
+            {/* Career Guidance Card */}
+            <div style={{
+              backgroundColor: 'white',
+              borderRadius: 'var(--radius-lg)',
+              overflow: 'hidden',
+              boxShadow: 'var(--shadow-lg)',
+              border: '1px solid rgba(0,0,0,0.06)',
+              display: 'flex',
+              flexDirection: 'column',
+            }}>
+              <div style={{
+                height: '340px',
+                backgroundImage: `url(${careerPoster})`,
+                backgroundSize: 'contain',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
+                backgroundColor: '#f8f8f8',
+              }} />
+              <div style={{ padding: '28px' }}>
+                <span style={{
+                  display: 'inline-block',
+                  backgroundColor: '#ff8c00',
+                  color: 'white',
+                  fontSize: '0.75rem',
+                  fontWeight: 700,
+                  padding: '4px 12px',
+                  borderRadius: '20px',
+                  marginBottom: '12px',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.05em',
+                }}>Guidance</span>
+                <h3 style={{ fontSize: '1.4rem', color: '#ff8c00', marginBottom: '12px' }}>Community Empowerment Seminar Series</h3>
+                <p style={{ marginBottom: '16px', fontSize: '1rem', lineHeight: '1.7', color: 'var(--text-secondary)' }}>
+                  A free seminar series focused on educational support, career guidance, digital knowledge, and community well-being.
+                </p>
+                <p style={{ marginBottom: '20px', fontSize: '0.95rem', color: 'var(--text-primary)' }}>
+                  <strong>📅 Date:</strong> Starting this September<br/>
+                  <strong>👥 Audience:</strong> Students & Professionals
+                </p>
+                <a href="#contact" className="btn" style={{ 
+                  backgroundColor: '#ff8c00', 
+                  color: 'white', 
+                  border: 'none',
+                  width: '100%', 
+                  justifyContent: 'center', 
+                  display: 'block', 
+                  textAlign: 'center', 
+                  textDecoration: 'none' 
+                }}>Learn More</a>
               </div>
             </div>
 

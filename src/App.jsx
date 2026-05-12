@@ -66,10 +66,9 @@ function AppContent() {
         <Route path="/admin" element={<Admin />} />
       </Routes>
 
-      {/* Global Footer */}
       <footer style={{ backgroundColor: 'var(--text-primary)', color: 'white', padding: '80px 0 30px' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '40px', marginBottom: '60px' }}>
+          <div className="footer-grid">
             <div>
               <h3>Tamil Sangam Lincolnshire</h3>
               <p style={{ opacity: 0.7, marginTop: '20px' }}>Celebrating and preserving Tamil traditions throughout Lincolnshire.</p>

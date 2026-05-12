@@ -36,9 +36,8 @@ const Hero = () => {
         }}></div>
       </div>
 
-      <div className="container animate-fade-in" style={{ color: 'white', zIndex: 1 }}>
-        <h1 className="text-shadow" style={{ 
-          fontSize: '4.5rem', 
+      <div className="container animate-fade-in" style={{ color: 'white', zIndex: 1, padding: '0 20px' }}>
+        <h1 className="text-shadow hero-title" style={{ 
           maxWidth: '800px', 
           marginBottom: '20px',
           textShadow: '2px 2px 15px rgba(0,0,0,0.5)'
@@ -46,8 +45,7 @@ const Hero = () => {
           Nurturing Tamil <br />
           <span style={{ color: 'var(--secondary)' }}>Culture & Heritage</span>
         </h1>
-        <p className="tamil-font" style={{ 
-          fontSize: '1.8rem', 
+        <p className="tamil-font hero-subtitle" style={{ 
           maxWidth: '700px', 
           marginBottom: '40px',
           opacity: 1,
@@ -57,7 +55,7 @@ const Hero = () => {
           லிங்கோன்செயர் தமிழ்ச் சங்கத்தில் இணைந்து, தேடல், கற்றல் மற்றும் சமூகப் பயணத்தைத் தொடங்குங்கள்.
         </p>
         
-        <div style={{ display: 'flex', gap: '20px' }}>
+        <div className="hero-buttons">
           <a href="#registration" className="btn btn-secondary" style={{ padding: '15px 35px', fontSize: '1.1rem', textDecoration: 'none' }}>
             Enrol Now
           </a>

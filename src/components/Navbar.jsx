@@ -5,6 +5,7 @@ import logo from '../assets/logo_raw.png';
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
   const isTamilSchool = location.pathname === '/tamil-school';
 
@@ -54,7 +55,7 @@ const Navbar = () => {
       boxShadow: isScrolled ? 'var(--shadow-md)' : 'none',
       borderBottom: isScrolled ? '1px solid var(--glass-border)' : 'none'
     }}>
-      <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+      <div className="container nav-container">
         <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '15px', textDecoration: 'none' }}>
           <div style={{
             width: isScrolled ? '80px' : '120px',
@@ -90,21 +91,20 @@ const Navbar = () => {
           </div>
         </Link>
         
-        <ul style={{ 
-          display: 'flex', 
-          gap: '20px', 
-          fontWeight: '700',
+        <button 
+          className="mobile-menu-btn" 
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          style={{ color: isScrolled ? 'var(--primary)' : '#ff9800' }}
+        >
+          {isMobileMenuOpen ? '✕' : '☰'}
+        </button>
+
+        <ul className={`nav-links ${isMobileMenuOpen ? 'mobile-open' : ''}`} style={{ 
           color: isScrolled ? 'var(--primary)' : '#ff9800', /* Vibrant orange when not scrolled */
-          margin: 0,
-          padding: 0,
-          listStyle: 'none',
-          alignItems: 'center',
-          flexWrap: 'nowrap',
-          whiteSpace: 'nowrap'
         }}>
-          <li><Link to="/" className="text-shadow menu-item" style={{ textDecoration: 'none', color: 'inherit' }}>Home</Link></li>
-          <li><Link to="/about" className="text-shadow menu-item" style={{ textDecoration: 'none', color: 'inherit' }}>About Us</Link></li>
-          <li><Link to="/team" className="text-shadow menu-item" style={{ textDecoration: 'none', color: 'inherit' }}>Our Team</Link></li>
+          <li><Link to="/" className="text-shadow menu-item" style={{ textDecoration: 'none', color: 'inherit' }} onClick={() => setIsMobileMenuOpen(false)}>Home</Link></li>
+          <li><Link to="/about" className="text-shadow menu-item" style={{ textDecoration: 'none', color: 'inherit' }} onClick={() => setIsMobileMenuOpen(false)}>About Us</Link></li>
+          <li><Link to="/team" className="text-shadow menu-item" style={{ textDecoration: 'none', color: 'inherit' }} onClick={() => setIsMobileMenuOpen(false)}>Our Team</Link></li>
           
           {/* Tamil School Menu */}
           <li 
@@ -115,10 +115,10 @@ const Navbar = () => {
             <span className="text-shadow menu-item" style={{ display: 'inline-block', padding: '10px 0' }}>Tamil School ▾</span>
             {dropdownOpen === 'school' && (
               <ul style={dropdownStyle}>
-                <li><Link to="/tamil-school" style={dropdownItemStyle}>Overview</Link></li>
-                <li><Link to="/tamil-school#term-dates" style={dropdownItemStyle}>Term Dates</Link></li>
-                <li><Link to="/tamil-school#past-papers" style={dropdownItemStyle}>Past Exam Papers</Link></li>
-                <li><Link to="/school/gallery" style={dropdownItemStyle}>School Gallery</Link></li>
+                <li><Link to="/tamil-school" style={dropdownItemStyle} onClick={() => setIsMobileMenuOpen(false)}>Overview</Link></li>
+                <li><Link to="/tamil-school#term-dates" style={dropdownItemStyle} onClick={() => setIsMobileMenuOpen(false)}>Term Dates</Link></li>
+                <li><Link to="/tamil-school#past-papers" style={dropdownItemStyle} onClick={() => setIsMobileMenuOpen(false)}>Past Exam Papers</Link></li>
+                <li><Link to="/school/gallery" style={dropdownItemStyle} onClick={() => setIsMobileMenuOpen(false)}>School Gallery</Link></li>
               </ul>
             )}
           </li>
@@ -132,24 +132,27 @@ const Navbar = () => {
             <span className="text-shadow menu-item" style={{ display: 'inline-block', padding: '10px 0' }}>Saiva Mandram ▾</span>
             {dropdownOpen === 'mandram' && (
               <ul style={dropdownStyle}>
-                <li><Link to="/saivaperavai" style={dropdownItemStyle}>Overview</Link></li>
-                <li><Link to="/mandram/pooja-calendar" style={dropdownItemStyle}>Pooja Calendar</Link></li>
-                <li><Link to="/mandram/gallery" style={dropdownItemStyle}>Mandram Gallery</Link></li>
+                <li><Link to="/saivaperavai" style={dropdownItemStyle} onClick={() => setIsMobileMenuOpen(false)}>Overview</Link></li>
+                <li><Link to="/mandram/pooja-calendar" style={dropdownItemStyle} onClick={() => setIsMobileMenuOpen(false)}>Pooja Calendar</Link></li>
+                <li><Link to="/mandram/gallery" style={dropdownItemStyle} onClick={() => setIsMobileMenuOpen(false)}>Mandram Gallery</Link></li>
               </ul>
             )}
           </li>
           
-          <li><Link to="/calendar" className="text-shadow menu-item" style={{ textDecoration: 'none', color: 'inherit' }}>Calendar</Link></li>
-          <li><Link to="/gallery" className="text-shadow menu-item" style={{ textDecoration: 'none', color: 'inherit' }}>Gallery</Link></li>
+          <li><Link to="/calendar" className="text-shadow menu-item" style={{ textDecoration: 'none', color: 'inherit' }} onClick={() => setIsMobileMenuOpen(false)}>Calendar</Link></li>
+          <li><Link to="/gallery" className="text-shadow menu-item" style={{ textDecoration: 'none', color: 'inherit' }} onClick={() => setIsMobileMenuOpen(false)}>Gallery</Link></li>
+          
+          <div className="enrol-btn-container">
+            <Link 
+              to="/tamil-school#registration" 
+              className={`btn ${isScrolled ? 'btn-primary' : 'btn-secondary'}`} 
+              style={{ padding: '8px 20px', textDecoration: 'none' }}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Enrol Now
+            </Link>
+          </div>
         </ul>
-
-        <Link 
-          to="/tamil-school#registration" 
-          className={`btn ${isScrolled ? 'btn-primary' : 'btn-secondary'}`} 
-          style={{ padding: '8px 20px', textDecoration: 'none' }}
-        >
-          Enrol Now
-        </Link>
       </div>
     </nav>
   );
