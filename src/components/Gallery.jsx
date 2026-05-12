@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import heroImg from '../assets/hero.png';
 
 const Gallery = () => {
   const images = [
+    { url: heroImg, caption: 'School Showcase' },
     { url: 'https://scontent.fman2-1.fna.fbcdn.net/v/t39.30808-6/636745188_122256107858177787_6167188308458373918_n.jpg?stp=c256.0.1536.1536a_dst-jpg_s552x414_tt6&_nc_cat=108&ccb=1-7&_nc_sid=5df8b4&_nc_ohc=BSL61h729TkQ7kNvwH_TQV7&_nc_oc=AdpCLgghCx0BE2IaMdwzTiCk0JHb2mz7Agee6KCggmMSLVwHHR_VFkal8VgZmFaYiuE&_nc_zt=23&_nc_ht=scontent.fman2-1.fna&_nc_gid=_024M_D9fFsGH50PH_MDiA&_nc_ss=7a389&oh=00_Af1Vs18-q6s1BGabPXY32f6SySUXSatYsOhYTo3fcsCHPg&oe=69E8125F', caption: 'Stirring the Pongal Pot' },
     { url: 'https://scontent.fman2-1.fna.fbcdn.net/v/t39.30808-6/636295749_122256107720177787_8952118292877117605_n.jpg?stp=c256.0.1536.1536a_dst-jpg_s552x414_tt6&_nc_cat=111&ccb=1-7&_nc_sid=5df8b4&_nc_ohc=r1nWp6nWCTsQ7kNvwGyeKHr&_nc_oc=AdqVvpp3iRMBClCn15QsyqAY9Wo7snlWSFZlFOMB7DceA6Md7-OI6rSu9-bZYqcvB2Y&_nc_zt=23&_nc_ht=scontent.fman2-2.fna&_nc_gid=_024M_D9fFsGH50PH_MDiA&_nc_ss=7a389&oh=00_Af2SVxHAK_MKc4Lzpn5oq5M5_GJ1zBqKpP-61r6SQ99C_Q&oe=69E8155A', caption: 'Traditional Food Service' },
     { url: 'https://scontent.fman2-1.fna.fbcdn.net/v/t39.30808-6/636911038_122256103088177787_7000786849444337240_n.jpg?stp=c256.0.1536.1536a_dst-jpg_s552x414_tt6&_nc_cat=103&ccb=1-7&_nc_sid=5df8b4&_nc_ohc=VAt51y0rwJcQ7kNvwERBsM9&_nc_oc=AdrW1BZEqlSQmQNoc-rfCl7ZZPs3om1Hgxl_1fd746-mK3PZdMLm1Ma7iVCzi5__xlU&_nc_zt=23&_nc_ht=scontent.fman2-1.fna&_nc_gid=UIuOaZIlWebbfkq0265SFw&_nc_ss=7a389&oh=00_Af1HwhAbqNDjPWvtpwAE9uWTz7v9zou_t8_XDBlArnE58w&oe=69E7F9E0', caption: 'Community Kitchen Group' },

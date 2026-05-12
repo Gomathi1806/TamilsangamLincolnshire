@@ -18,7 +18,7 @@ import {
 import Admin from './pages/Admin';
 import Team from './pages/Team';
 import { useScrollReveal } from './hooks/useScrollReveal';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import { useEffect } from 'react';
 
 // Helper component to handle scrolling to #hash links
@@ -77,13 +77,13 @@ function AppContent() {
             <div>
               <h4 style={{ marginBottom: '20px' }}>Quick Links</h4>
               <ul style={{ display: 'flex', flexDirection: 'column', gap: '10px', opacity: 0.7 }}>
-                <li><a href="/" style={{ color: 'inherit', textDecoration: 'none' }}>Home</a></li>
-                <li><a href="/about" style={{ color: 'inherit', textDecoration: 'none' }}>About Us</a></li>
-                <li><a href="/tamil-school" style={{ color: 'inherit', textDecoration: 'none' }}>Tamil School</a></li>
-                <li><a href="/saivaperavai" style={{ color: 'inherit', textDecoration: 'none' }}>Saiva Mandram</a></li>
-                <li><a href="/calendar" style={{ color: 'inherit', textDecoration: 'none' }}>Calendar</a></li>
-                <li><a href="/gallery" style={{ color: 'inherit', textDecoration: 'none' }}>Gallery</a></li>
-                <li><a href="/admin" style={{ color: 'inherit', textDecoration: 'none', opacity: 0.5 }}>Admin Login</a></li>
+                <li><Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}>Home</Link></li>
+                <li><Link to="/about" style={{ color: 'inherit', textDecoration: 'none' }}>About Us</Link></li>
+                <li><Link to="/tamil-school" style={{ color: 'inherit', textDecoration: 'none' }}>Tamil School</Link></li>
+                <li><Link to="/saivaperavai" style={{ color: 'inherit', textDecoration: 'none' }}>Saiva Mandram</Link></li>
+                <li><Link to="/calendar" style={{ color: 'inherit', textDecoration: 'none' }}>Calendar</Link></li>
+                <li><Link to="/gallery" style={{ color: 'inherit', textDecoration: 'none' }}>Gallery</Link></li>
+                <li><Link to="/admin" style={{ color: 'inherit', textDecoration: 'none', opacity: 0.5 }}>Admin Login</Link></li>
               </ul>
             </div>
             <div>

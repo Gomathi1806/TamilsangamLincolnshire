@@ -57,8 +57,8 @@ const Navbar = () => {
       <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '15px', textDecoration: 'none' }}>
           <div style={{
-            width: isScrolled ? '65px' : '90px',
-            height: isScrolled ? '65px' : '90px',
+            width: isScrolled ? '80px' : '120px',
+            height: isScrolled ? '80px' : '120px',
             borderRadius: '50%',
             overflow: 'hidden',
             backgroundColor: 'white',
@@ -77,7 +77,7 @@ const Navbar = () => {
           <div>
             <h1 style={{ 
               fontSize: isScrolled ? '1.1rem' : '1.3rem', 
-              color: isScrolled ? 'var(--primary)' : 'white', 
+              color: '#ff9800', /* Vibrant orange */
               transition: 'var(--transition)',
               margin: 0
             }}>Tamil Sangam Lincolnshire</h1>
@@ -86,7 +86,7 @@ const Navbar = () => {
               color: isScrolled ? 'var(--text-secondary)' : 'rgba(255,255,255,0.8)',
               transition: 'var(--transition)',
               margin: 0
-            }}>லிங்கோன்செயர் தமிழ்ச் சங்கம்</p>
+            }}>தமிழ்ச்சங்கம் லிங்கோன்செயர்</p>
           </div>
         </Link>
         

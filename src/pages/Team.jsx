@@ -5,19 +5,19 @@ const Team = () => {
   useScrollReveal();
 
   // We use string paths from the 'public' folder so the build doesn't crash if files are missing
-  const team = [
-    { name: 'Mr. Sivanadeyan Ahilan', role: 'Founder & Coordinator', tamilRole: 'நிறுவனர் மற்றும் ஒருங்கிணைப்பாளர்', image: '/team/ahilan.jpg' },
-    { name: 'Mr. Sanjeevan Somasundram', role: 'Founder', tamilRole: 'நிறுவனர்', image: '/team/sanjeevan.jpg' },
-    { name: 'Mrs. Kalyani Thevarajah', role: 'Founder', tamilRole: 'நிறுவனர்', image: '/team/kalyani.jpg' },
-    { name: 'Mrs. Tharani Thasaruban', role: 'Tamil Teacher', tamilRole: 'தமிழ் ஆசிரியர்', image: '/team/tharani.jpg' },
-    { name: 'Mrs. Thanusha Ravichandran', role: 'Events Manager & Tamil Teacher', tamilRole: 'நிகழ்வு மேலாளர் மற்றும் தமிழ் ஆசிரியர்', image: '/team/thanusha.jpg' },
-    { name: 'Shrimathi Mehala Barathan', role: 'Baratham Teacher', tamilRole: 'பரதநாட்டிய ஆசிரியர்', image: '/team/mehala.jpg' },
-    { name: 'Miss. Sujani Sivasuthan', role: 'Vocal Teacher', tamilRole: 'வாய்ப்பாட்டு ஆசிரியர்', image: '/team/sujani.jpg' },
-    { name: 'Mrs. Aranee Sanjeevan', role: 'Tamil Teacher', tamilRole: 'தமிழ் ஆசிரியர்', image: '/team/aranee.jpg' },
-    { name: 'Mrs. Sivaranjani Sasiinthiran', role: 'Tamil Teacher', tamilRole: 'தமிழ் ஆசிரியர்', image: '/team/sivaranjani.jpg' },
-    { name: 'Mrs. Niruja Emil', role: 'Tamil Teacher', tamilRole: 'தமிழ் ஆசிரியர்', image: '/team/niruja.jpg' },
-    { name: 'Mrs. Prashshika Kugappirian', role: 'Tamil Teacher', tamilRole: 'தமிழ் ஆசிரியர்', image: '/team/prashshika.jpg' },
-  ];
+    const team = [
+      { name: 'Mr. Sivanadeyan Ahilan', role: 'Founder & Coordinator', tamilRole: 'நிறுவனர் மற்றும் ஒருங்கிணைப்பாளர்', image: '/team/ahilan.jpg' },
+      { name: 'Mr. Sanjeevan Somasundram', role: 'Founder', tamilRole: 'நிறுவனர்', image: '/team/sanjeevan.jpg' },
+      { name: 'Mrs. Kalyani Thevarajah', role: 'Founder', tamilRole: 'நிறுவனர்', image: '/team/kalyani.jpg' },
+      { name: 'Mrs. Thanusha Ravichandran', role: 'Events Manager & Tamil Teacher', tamilRole: 'நிகழ்வு மேலாளர் மற்றும் தமிழ் ஆசிரியர்', image: '/team/thanusha.jpg' },
+      { name: 'Shrimathi Mehala Barathan', role: 'Baratham Teacher', tamilRole: 'பரதநாட்டிய ஆசிரியர்', image: '/team/mehala.jpg' },
+      { name: 'Mrs. Aranee Sanjeevan', role: 'Tamil Teacher', tamilRole: 'தமிழ் ஆசிரியர்', image: '/team/aranee.jpg' },
+      { name: 'Mrs. Sivaranjani Sasiinthiran', role: 'Tamil Teacher', tamilRole: 'தமிழ் ஆசிரியர்', image: '/team/sivaranjani.jpg' },
+      { name: 'Mrs. Niruja Emil', role: 'Tamil Teacher', tamilRole: 'தமிழ் ஆசிரியர்', image: '/team/niruja.jpg' },
+      { name: 'Mrs. Prashshika Kugappirian', role: 'Tamil Teacher', tamilRole: 'தமிழ் ஆசிரியர்', image: '/team/prashshika.jpg' },
+      { name: 'Mrs. Tharani Thasaruban', role: 'Tamil Teacher', tamilRole: 'தமிழ் ஆசிரியர்', image: '/team/tharani.jpg' },
+      { name: 'Miss. Sujani Sivasuthan', role: 'Vocal Teacher', tamilRole: 'வாய்ப்பாட்டு ஆசிரியர்', image: '/team/sujani.jpg' },
+    ];
 
   return (
     <div style={{ paddingTop: '100px', minHeight: '100vh', backgroundColor: 'var(--bg-primary)' }}>
