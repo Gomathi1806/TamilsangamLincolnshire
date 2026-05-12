@@ -54,24 +54,25 @@ const Hero = () => {
           fontWeight: '500',
           lineHeight: '1.4'
         }}>
-          கிரந்தம் தமிழ்ச் சங்கத்தில் இணைந்து, தேடல், கற்றல் மற்றும் சமூகப் பயணத்தைத் தொடங்குங்கள்.
+          லிங்கோன்செயர் தமிழ்ச் சங்கத்தில் இணைந்து, தேடல், கற்றல் மற்றும் சமூகப் பயணத்தைத் தொடங்குங்கள்.
         </p>
         
         <div style={{ display: 'flex', gap: '20px' }}>
-          <button className="btn btn-secondary" style={{ padding: '15px 35px', fontSize: '1.1rem' }}>
+          <a href="#registration" className="btn btn-secondary" style={{ padding: '15px 35px', fontSize: '1.1rem', textDecoration: 'none' }}>
             Enrol Now
-          </button>
-          <button className="btn" style={{ 
+          </a>
+          <a href="#classes" className="btn" style={{ 
             backgroundColor: '#ff8c00', /* Highlighted Orange */
             color: 'white',
             border: '2px solid #ff8c00',
             padding: '15px 35px', 
             fontSize: '1.2rem',
             fontWeight: 'bold',
-            boxShadow: '0 0 20px rgba(255, 140, 0, 0.4)'
+            boxShadow: '0 0 20px rgba(255, 140, 0, 0.4)',
+            textDecoration: 'none'
           }}>
             Explore Classes
-          </button>
+          </a>
         </div>
       </div>
       

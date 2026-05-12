@@ -2,8 +2,8 @@ import React from 'react';
 
 const Stats = () => {
   const stats = [
-    { label: 'Students', value: '150+', icon: '🎓' },
-    { label: 'Years', value: '10+', icon: '🏛️' },
+    { label: 'Students', value: '47+', icon: '🎓' },
+    { label: 'Years', value: '4+', icon: '🏛️' },
     { label: 'Volunteers', value: '25+', icon: '🤝' },
     { label: 'Classes', value: '12', icon: '📚' },
   ];
