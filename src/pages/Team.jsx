@@ -17,6 +17,7 @@ const Team = () => {
       { name: 'Mrs. Prashshika Kugappirian', role: 'Tamil Teacher', tamilRole: 'தமிழ் ஆசிரியர்', image: '/team/prashshika.jpg' },
       { name: 'Mrs. Tharani Thasaruban', role: 'Tamil Teacher', tamilRole: 'தமிழ் ஆசிரியர்', image: '/team/tharani.jpg' },
       { name: 'Miss. Sujani Sivasuthan', role: 'Vocal Teacher', tamilRole: 'வாய்ப்பாட்டு ஆசிரியர்', image: '/team/sujani.jpg' },
+      { name: 'Mrs. [Name]', role: 'Sewing Instructor', tamilRole: 'தையல் பயிற்றுநர்', image: '/team/sewing.jpg' },
     ];
 
   return (
