@@ -98,7 +98,7 @@ function AppContent() {
             </div>
           </div>
           <div style={{ borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '30px', textAlign: 'center', opacity: 0.5, fontSize: '0.9rem' }}>
-            &copy; 2026 Tamil Sangam Lincolnshire. All rights reserved. Registered Charity.
+            &copy; 2026 Tamil Sangam Lincolnshire. All rights reserved. Registered Charity. Powered by newzie.tech@gmail.com
           </div>
         </div>
       </footer>
