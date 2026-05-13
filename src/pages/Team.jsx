@@ -70,7 +70,7 @@ const Team = () => {
                 <img 
                   src={member.image} 
                   alt={member.name} 
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }}
                   onError={(e) => { 
                     e.target.onerror = null;
                     e.target.src = 'https://via.placeholder.com/400x400?text=Photo+Coming+Soon'; 
