@@ -51,6 +51,7 @@ const Navbar = () => {
           <li><Link to="/" className="text-shadow menu-item" onClick={() => setIsMobileMenuOpen(false)}>Home</Link></li>
           <li><Link to="/about" className="text-shadow menu-item" onClick={() => setIsMobileMenuOpen(false)}>About Us</Link></li>
           <li><Link to="/team" className="text-shadow menu-item" onClick={() => setIsMobileMenuOpen(false)}>Our Team</Link></li>
+          <li><Link to="/achievements" className="text-shadow menu-item" onClick={() => setIsMobileMenuOpen(false)}>Achievements</Link></li>
           
           {/* Tamil School Menu */}
           <li 

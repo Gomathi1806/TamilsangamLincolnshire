@@ -7,6 +7,7 @@ import Saivaperavai from './pages/Saivaperavai';
 import GalleryPage from './pages/GalleryPage';
 import Finance from './pages/Finance';
 import AboutUs from './pages/AboutUs';
+import Achievements from './pages/Achievements';
 import { 
   Calendar, 
   TermDates, 
@@ -52,6 +53,7 @@ function AppContent() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutUs />} />
+        <Route path="/achievements" element={<Achievements />} />
         <Route path="/team" element={<Team />} />
         <Route path="/tamil-school" element={<TamilSchool />} />
         <Route path="/school/term-dates" element={<TermDates />} />
@@ -78,6 +80,8 @@ function AppContent() {
               <ul style={{ display: 'flex', flexDirection: 'column', gap: '10px', opacity: 0.7 }}>
                 <li><Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}>Home</Link></li>
                 <li><Link to="/about" style={{ color: 'inherit', textDecoration: 'none' }}>About Us</Link></li>
+                <li><Link to="/team" style={{ color: 'inherit', textDecoration: 'none' }}>Our Team</Link></li>
+                <li><Link to="/achievements" style={{ color: 'inherit', textDecoration: 'none' }}>Achievements</Link></li>
                 <li><Link to="/tamil-school" style={{ color: 'inherit', textDecoration: 'none' }}>Tamil School</Link></li>
                 <li><Link to="/saivaperavai" style={{ color: 'inherit', textDecoration: 'none' }}>Saiva Mandram</Link></li>
                 <li><Link to="/calendar" style={{ color: 'inherit', textDecoration: 'none' }}>Calendar</Link></li>
