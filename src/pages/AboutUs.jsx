@@ -59,7 +59,7 @@ const AboutUs = () => {
         </section>
 
         {/* Our Vision */}
-        <section style={{ ...sectionStyle, backgroundColor: 'var(--bg-secondary, #fdf6ee)', borderRadius: '16px', padding: '40px 40px 36px' }}>
+        <section className="about-card" style={{ ...sectionStyle, backgroundColor: 'var(--bg-secondary, #fdf6ee)', borderRadius: '16px' }}>
           <div style={decorLineStyle} />
           <h2 className="tamil-font" style={headingStyle}>எங்கள் நோக்கம்</h2>
           <ul style={{ padding: 0, margin: '10px 0 0', listStyle: 'none' }}>
@@ -135,11 +135,10 @@ const AboutUs = () => {
         </section>
 
         {/* Community Highlight */}
-        <section style={{
+        <section className="about-card-highlight" style={{
           ...sectionStyle,
           background: 'linear-gradient(135deg, var(--primary) 0%, #a00000 100%)',
           borderRadius: '16px',
-          padding: '44px 40px',
           color: 'white',
         }}>
           <div style={{ ...decorLineStyle, backgroundColor: 'var(--secondary)' }} />

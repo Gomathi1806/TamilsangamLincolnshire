@@ -10,7 +10,7 @@ const Stats = () => {
 
   return (
     <section className="reveal" style={{ backgroundColor: 'var(--primary)', color: 'white', padding: '60px 0' }}>
-      <div className="container" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '30px' }}>
+      <div className="container stats-grid">
         {stats.map((stat, index) => (
           <div key={index} style={{ textAlign: 'center' }}>
             <div style={{ fontSize: '2.5rem', marginBottom: '10px' }}>{stat.icon}</div>

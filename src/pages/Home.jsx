@@ -13,30 +13,13 @@ const Home = () => {
   return (
     <div className="home-page" style={{ paddingTop: '80px' }}>
       {/* Hero Section for Community */}
-      <section style={{
-        position: 'relative',
-        height: '100vh',
-        minHeight: '700px',
-        display: 'flex',
-        alignItems: 'flex-end',
-        justifyContent: 'center',
-        textAlign: 'center',
-        overflow: 'hidden',
-        paddingBottom: '80px'
-      }}>
+      <section className="home-hero">
         {/* Background image */}
-        <div style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          zIndex: 0
-        }}>
+        <div className="home-hero-bg">
           <img 
             src={heroLanding} 
             alt="Lincolnshire Tamil Sangam" 
-            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+            className="home-hero-img"
           />
           {/* Subtle overlay for text contrast - matches Tamil School style */}
           <div style={{
@@ -46,7 +29,7 @@ const Home = () => {
           }}></div>
         </div>
 
-        <div className="container reveal" style={{ position: 'relative', zIndex: 2, padding: '20px' }}>
+        <div className="container reveal home-hero-buttons-container" style={{ position: 'relative', zIndex: 2, padding: '20px' }}>
           <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <Link to="/tamil-school" className="btn btn-primary" style={{ fontSize: '1.1rem', padding: '15px 35px' }}>Our Tamil School</Link>
             <Link to="/about" className="btn" style={{ 
@@ -312,15 +295,7 @@ const Home = () => {
             <p className="tamil-font" style={{ fontSize: '1.2rem', marginBottom: '10px' }}>தொடர்புக்கு</p>
           </div>
           
-          <div style={{ 
-            display: 'grid', 
-            gridTemplateColumns: '1fr 1fr', 
-            gap: '50px',
-            backgroundColor: 'var(--bg-secondary)',
-            padding: '50px',
-            borderRadius: 'var(--radius-lg)',
-            boxShadow: 'var(--shadow-md)'
-          }}>
+          <div className="contact-grid">
             <div>
               <h3 style={{ marginBottom: '20px', color: 'var(--primary)' }}>Get in Touch</h3>
               <p style={{ marginBottom: '30px' }}>Have questions about our classes or events? Reach out to our team.</p>

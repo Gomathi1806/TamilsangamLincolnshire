@@ -121,27 +121,29 @@ export const PoojaCalendar = () => {
           maxWidth: '1000px',
           margin: '0 auto'
         }}>
-          <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left' }}>
-            <thead>
-              <tr style={{ backgroundColor: 'var(--primary)', color: 'white' }}>
-                <th className="tamil-font" style={{ padding: '20px', fontSize: '1.1rem' }}>உண்மையான பூஜை & திகதி</th>
-                <th className="tamil-font" style={{ padding: '20px', fontSize: '1.1rem' }}>பூஜை நடைபெறும் நாள்</th>
-              </tr>
-            </thead>
-            <tbody>
-              {poojaDates.map((p, i) => (
-                <tr key={i} style={{ backgroundColor: i % 2 === 0 ? 'white' : '#fcf8f3', borderBottom: '1px solid #eee' }}>
-                  <td style={{ padding: '20px' }}>
-                    <div className="tamil-font" style={{ fontWeight: 'bold', color: 'var(--primary)', marginBottom: '4px' }}>{p.event}</div>
-                    <div style={{ fontSize: '0.9rem', color: '#666' }}>{p.actualDate}</div>
-                  </td>
-                  <td className="tamil-font" style={{ padding: '20px', color: 'var(--text-primary)', fontWeight: '600' }}>
-                    {p.heldOn}
-                  </td>
+          <div className="table-responsive">
+            <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', minWidth: '600px' }}>
+              <thead>
+                <tr style={{ backgroundColor: 'var(--primary)', color: 'white' }}>
+                  <th className="tamil-font" style={{ padding: '20px', fontSize: '1.1rem' }}>உண்மையான பூஜை & திகதி</th>
+                  <th className="tamil-font" style={{ padding: '20px', fontSize: '1.1rem' }}>பூஜை நடைபெறும் நாள்</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {poojaDates.map((p, i) => (
+                  <tr key={i} style={{ backgroundColor: i % 2 === 0 ? 'white' : '#fcf8f3', borderBottom: '1px solid #eee' }}>
+                    <td style={{ padding: '20px' }}>
+                      <div className="tamil-font" style={{ fontWeight: 'bold', color: 'var(--primary)', marginBottom: '4px' }}>{p.event}</div>
+                      <div style={{ fontSize: '0.9rem', color: '#666' }}>{p.actualDate}</div>
+                    </td>
+                    <td className="tamil-font" style={{ padding: '20px', color: 'var(--text-primary)', fontWeight: '600' }}>
+                      {p.heldOn}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
 
         <div style={{ textAlign: 'center', marginTop: '40px' }}>

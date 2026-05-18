@@ -191,9 +191,8 @@ const TamilSchool = () => {
             <p className="tamil-font" style={{ fontSize: '1.2rem', color: 'var(--text-secondary)' }}>மாணவர் சேர்க்கை படிவம்</p>
           </div>
 
-          <div style={{
+          <div className="form-container" style={{
             backgroundColor: 'white',
-            padding: '40px',
             borderRadius: 'var(--radius-lg)',
             boxShadow: 'var(--shadow-lg)',
             borderTop: '8px solid var(--primary)'
