@@ -25,13 +25,13 @@ jobs:
     - name: Build Project
       run: npm run build
 
-    - name: Deploy Files via FTP to IONOS
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+    - name: Deploy Files via Secure SFTP to IONOS
+      uses: wlixcc/SFTP-Deploy-Action@v1.2.4
       with:
-        server: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: ./dist/      # The folder Vite creates
-        server-dir: /           # Uploads directly to your root folder
-        protocol: sftp           # Standard connection protocol for webspace
+        server: ${{ secrets.FTP_SERVER }}
         port: 22
+        local_path: './dist/*'      # Paths use underscores in this action
+        remote_path: '/'            # Uploads straight to your web root
+        sftp_only: true
