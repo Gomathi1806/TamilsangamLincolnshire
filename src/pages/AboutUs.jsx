@@ -162,7 +162,7 @@ const AboutUs = () => {
             className="btn btn-primary"
             style={{ padding: '14px 36px', fontSize: '1rem', textDecoration: 'none', display: 'inline-block' }}
           >
-            Enrol Now
+            Enrol Now - Testing change propogation
           </a>
 
           <div style={{
