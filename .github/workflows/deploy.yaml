@@ -33,4 +33,5 @@ jobs:
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./dist/      # The folder Vite creates
         server-dir: /           # Uploads directly to your root folder
-        protocol: ftp           # Standard connection protocol for webspace
+        protocol: sftp           # Standard connection protocol for webspace
+        port: 22
