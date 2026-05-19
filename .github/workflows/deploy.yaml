@@ -33,5 +33,5 @@ jobs:
         server: ${{ secrets.FTP_SERVER }}
         port: 22
         local_path: './dist/*'      # Paths use underscores in this action
-        remote_path: '/'            # Uploads straight to your web root
+        remote_path: '/tamilSite'            # Uploads straight to your web root
         sftp_only: true
