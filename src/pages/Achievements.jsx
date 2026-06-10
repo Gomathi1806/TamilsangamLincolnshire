@@ -1,6 +1,9 @@
 import React from 'react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
+/** Runtime base URL for assets */
+const assetBase = `${import.meta.env.BASE_URL}achievements/`;
+
 const Achievements = () => {
   useScrollReveal();
 
@@ -11,7 +14,7 @@ const Achievements = () => {
       tamilTitle: 'அங்கீகரிக்கப்பட்ட தொண்டு நிறுவனம்',
       date: '2025 - 2026',
       description: 'Tamil Sangam Lincolnshire has officially registered as a UK Charity. This milestone establishes our commitment to transparency, governance, and scaling our community programs for years to come.',
-      image: '/achievements/charity_cert.jpg',
+      image: `${assetBase}charity_cert.jpg`,
       fallbackImage: 'https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=800&q=80', // Governance concept
       tag: 'Governance'
     },
@@ -21,7 +24,7 @@ const Achievements = () => {
       tamilTitle: 'ஆண்டு தமிழ் விளையாட்டு விழா',
       date: 'Summer 2025',
       description: 'Organized our annual community sports festival, bringing together over 200 participants to engage in traditional Tamil sports and classic athletic tracks, promoting physical fitness and community bonding.',
-      image: '/achievements/sports_meet.jpg',
+      image: `${assetBase}sports_meet.jpg`,
       fallbackImage: 'https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=800&q=80', // Sports/Community concept
       tag: 'Sports'
     },
@@ -31,7 +34,7 @@ const Achievements = () => {
       tamilTitle: 'மாபெரும் கலாசார விழாக்கள்',
       date: 'January 2026',
       description: 'Celebrated Pongal and Tamil New Year festivals with grand public showcases of traditional music, debates, and outstanding Bharatanatyam performances by our talented youth.',
-      image: '/achievements/culture_fest.jpg',
+      image: `${assetBase}culture_fest.jpg`,
       fallbackImage: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80', // Cultural stage concept
       tag: 'Culture'
     },
@@ -41,7 +44,7 @@ const Achievements = () => {
       tamilTitle: 'தமிழ்ப்பள்ளி கல்வி சாதனைகள்',
       date: 'Ongoing',
       description: 'Our Tamil School achieved record-breaking enrollment of over 50 students, preserving and teaching the Tamil language, literature, and history through structured curriculum and formal exams.',
-      image: '/achievements/school_success.jpg',
+      image: `${assetBase}school_success.jpg`,
       fallbackImage: 'https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=800&q=80', // Education/Classroom concept
       tag: 'Education'
     }
@@ -52,8 +55,8 @@ const Achievements = () => {
       id: 1,
       title: 'Annual Cultural Festival Highlights 2026',
       tamilTitle: 'கலாசார விழா சிறப்புகள் 2026',
-      videoUrl: '/achievements/culture_highlights.mp4',
-      poster: '/achievements/culture_highlights_poster.jpg',
+      videoUrl: `${assetBase}culture_highlights.mp4`,
+      poster: `${assetBase}culture_highlights_poster.jpg`,
       fallbackPoster: 'https://images.unsplash.com/photo-1460881680858-30d872d5b530?auto=format&fit=crop&w=1200&q=80', // Premium video preview image
       description: 'A beautiful visual montage showcasing our traditional dances, musical recitals, and pongal boiling celebrations.'
     },
@@ -61,8 +64,8 @@ const Achievements = () => {
       id: 2,
       title: 'Tamil School Annual Day Showcase',
       tamilTitle: 'தமிழ்ப்பள்ளி ஆண்டு விழா',
-      videoUrl: '/achievements/school_showcase.mp4',
-      poster: '/achievements/school_showcase_poster.jpg',
+      videoUrl: `${assetBase}school_showcase.mp4`,
+      poster: `${assetBase}school_showcase_poster.jpg`,
       fallbackPoster: 'https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1200&q=80', // Classroom showcase image
       description: 'Highlights from our young students reciting Thirukkural, performing short Tamil plays, and receiving academic awards.'
     }
